@@ -1,0 +1,84 @@
+.reports-container {
+  max-width: 1100px;
+  margin: 32px auto;
+}
+
+.date-range-form {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+mat-card {
+  margin-bottom: 24px;
+}
+
+.billable-bar-visual {
+  margin: 16px 0 24px 0;
+}
+.bar-container {
+  display: flex;
+  height: 24px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e0e0e0;
+  margin-bottom: 4px;
+}
+.bar-billable {
+  background: #43a047;
+  height: 100%;
+  transition: width 0.5s;
+}
+.bar-nonbillable {
+  background: #e53935;
+  height: 100%;
+  transition: width 0.5s;
+}
+.bar-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95em;
+  margin-top: 2px;
+}
+.billable-label {
+  color: #43a047;
+  font-weight: 500;
+}
+.nonbillable-label {
+  color: #e53935;
+  font-weight: 500;
+}
+.billable-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+  font-size: 1.08em;
+}
+.summary-label {
+  color: #666;
+  font-size: 0.98em;
+  margin-right: 6px;
+}
+.summary-value {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-left: 4px;
+}
+.billable-badge {
+  color: #fff;
+  background: #43a047;
+  border-radius: 8px;
+  padding: 2px 10px;
+  margin-left: 6px;
+}
+.nonbillable-badge {
+  color: #fff;
+  background: #e53935;
+  border-radius: 8px;
+  padding: 2px 10px;
+  margin-left: 6px;
+}

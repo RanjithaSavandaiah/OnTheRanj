@@ -1,0 +1,54 @@
+<app-toolbar [userFullName]="(user$ | async)?.fullName ?? null" (logout)="onLogout()">
+  <span title>Manager Dashboard</span>
+</app-toolbar>
+<div class="dashboard-main">
+  <div class="dashboard-summary">
+    <mat-card class="summary-card" matTooltip="Total Projects">
+      <mat-icon color="primary">folder</mat-icon>
+      <div class="summary-value">{{ projectCount || null }}</div>
+      <div class="summary-label">Projects</div>
+    </mat-card>
+    <mat-card class="summary-card" matTooltip="Total Employees">
+      <mat-icon color="accent">group</mat-icon>
+      <div class="summary-value">{{ employeeCount || null }}</div>
+      <div class="summary-label">Employees</div>
+    </mat-card>
+    <mat-card class="summary-card" matTooltip="Timesheets Submitted">
+      <mat-icon color="primary">assignment_turned_in</mat-icon>
+      <div class="summary-value">{{ timesheetCount || null }}</div>
+      <div class="summary-label">Timesheets</div>
+    </mat-card>
+    <mat-card class="summary-card" matTooltip="Pending Approvals">
+      <mat-icon color="warn">pending_actions</mat-icon>
+      <div class="summary-value">{{ pendingApprovalCount || null }}</div>
+      <div class="summary-label">Pending Approvals</div>
+    </mat-card>
+  </div>
+  <mat-card class="quick-actions">
+    <mat-card-header>
+      <mat-card-title>Quick Actions</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="actions-list">
+        <button mat-raised-button color="primary" routerLink="/manager/approvals"
+          matTooltip="Review and approve timesheets">
+          <mat-icon>approval</mat-icon>
+          Approvals
+        </button>
+        <button mat-raised-button color="accent" routerLink="/manager/projects" matTooltip="Manage project codes">
+          <mat-icon>folder</mat-icon>
+          Projects
+        </button>
+        <button mat-raised-button color="primary" routerLink="/manager/assignments"
+          matTooltip="Assign employees to projects">
+          <mat-icon>assignment_ind</mat-icon>
+          Assignments
+        </button>
+        <button mat-raised-button color="accent" routerLink="/manager/reports" matTooltip="View analytics and reports">
+          <mat-icon>bar_chart</mat-icon>
+          Reports
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

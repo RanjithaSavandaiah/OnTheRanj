@@ -1,0 +1,36 @@
+.unauthorized-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.unauthorized-card {
+  max-width: 500px;
+  text-align: center;
+  padding: 48px;
+}
+
+.error-icon {
+  font-size: 72px;
+  width: 72px;
+  height: 72px;
+  color: #f44336;
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 32px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 32px;
+}
+
+button mat-icon {
+  margin-right: 8px;
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZWPq0hTajss=",
+  "success": true,
+  "projectFilePath": "/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/temp-bcrypt.csproj",
+  "expectedPackageFiles": [
+    "/Users/sava446277/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

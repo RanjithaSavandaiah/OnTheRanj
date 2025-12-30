@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="be0e7af6-ebfa-4910-bb4d-6b0b80d56cd7" name="@LT-24-280 2025-12-30 12:03:09" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-12-30T12:03:09.3857940+05:30" queuing="2025-12-30T12:03:09.3857940+05:30" start="2025-12-30T12:03:09.0154020+05:30" finish="2025-12-30T12:03:09.3960680+05:30" />
+  <TestSettings name="default" id="b616b3e9-ed8b-4b46-a68a-04eccaa5a949">
+    <Deployment runDeploymentRoot="_LT-24-280_2025-12-30_12_03_09" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="b914be46-9abf-4402-8e01-098e198390a5" testId="f2039ea6-4a1b-f159-8022-40b189e01680" testName="GetDashboardSummary_Returns500_OnException" computerName="LT-24-280" duration="00:00:00.0007390" startTime="2025-12-30T12:03:09.3433960+05:30" endTime="2025-12-30T12:03:09.3441350+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b914be46-9abf-4402-8e01-098e198390a5" />
+    <UnitTestResult executionId="b6ae2ad3-32ed-42bc-8fb4-1b09bc73230e" testId="2c9708de-0ca3-e6b6-ea40-ebd29ac569f5" testName="GetEmployeeHoursSummary_ReturnsOk" computerName="LT-24-280" duration="00:00:00.0005940" startTime="2025-12-30T12:03:09.3453450+05:30" endTime="2025-12-30T12:03:09.3459390+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6ae2ad3-32ed-42bc-8fb4-1b09bc73230e" />
+    <UnitTestResult executionId="70a9fe9e-04a4-4b53-b018-2db2fabebe97" testId="ae6b4cd8-93dc-6896-a681-0e6a1d207aa2" testName="GetBillableVsNonBillableHours_ReturnsOk_WhenNull" computerName="LT-24-280" duration="00:00:00.0003860" startTime="2025-12-30T12:03:09.3430030+05:30" endTime="2025-12-30T12:03:09.3433890+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70a9fe9e-04a4-4b53-b018-2db2fabebe97" />
+    <UnitTestResult executionId="0be1e52b-9c73-4d3e-9e27-ed7707f9aefb" testId="1630e7e7-09e8-e51b-9add-a5998938bb6f" testName="GetBillableVsNonBillableHours_ReturnsOk" computerName="LT-24-280" duration="00:00:00.0012690" startTime="2025-12-30T12:03:09.3417260+05:30" endTime="2025-12-30T12:03:09.3429950+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0be1e52b-9c73-4d3e-9e27-ed7707f9aefb" />
+    <UnitTestResult executionId="ff49bbd1-6aed-4ed4-9f55-83e0473ab956" testId="1aa8c8d3-5d87-79af-9a0e-dbbfda8f0d71" testName="GetEmployeeHoursSummary_ReturnsOk_WhenEmpty" computerName="LT-24-280" duration="00:00:00.0016850" startTime="2025-12-30T12:03:09.3459430+05:30" endTime="2025-12-30T12:03:09.3476280+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff49bbd1-6aed-4ed4-9f55-83e0473ab956" />
+    <UnitTestResult executionId="9129f9d1-960c-4be9-ba49-334c9d6d955d" testId="08972808-059d-f19b-2f22-8c87d04d02c5" testName="GetProjectHoursSummary_ReturnsOk" computerName="LT-24-280" duration="00:00:00.0005060" startTime="2025-12-30T12:03:09.3484130+05:30" endTime="2025-12-30T12:03:09.3489190+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9129f9d1-960c-4be9-ba49-334c9d6d955d" />
+    <UnitTestResult executionId="3b34df20-8796-48ee-8fa6-76c251bc4638" testId="cd8e8d28-efd6-2e82-c727-c4946774aaa7" testName="GetBillableVsNonBillableHours_Returns500_OnException" computerName="LT-24-280" duration="00:00:00.0319970" startTime="2025-12-30T12:03:09.3091860+05:30" endTime="2025-12-30T12:03:09.3411610+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b34df20-8796-48ee-8fa6-76c251bc4638" />
+    <UnitTestResult executionId="929a7cae-6029-4e7b-87df-9437bf32d7c5" testId="9853416b-a36c-1254-feac-cdd5a3cc6b97" testName="GetProjectHoursSummary_ReturnsOk_WhenEmpty" computerName="LT-24-280" duration="00:00:00.0003780" startTime="2025-12-30T12:03:09.3489230+05:30" endTime="2025-12-30T12:03:09.3493010+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="929a7cae-6029-4e7b-87df-9437bf32d7c5" />
+    <UnitTestResult executionId="82f83d8d-57b3-4b0e-8145-35c1da4431b4" testId="4eeaefd9-c3c1-67cc-e73c-299a2a2f6d4d" testName="GetEmployeeHoursSummary_Returns500_OnException" computerName="LT-24-280" duration="00:00:00.0007560" startTime="2025-12-30T12:03:09.3445820+05:30" endTime="2025-12-30T12:03:09.3453380+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82f83d8d-57b3-4b0e-8145-35c1da4431b4" />
+    <UnitTestResult executionId="90c50bd7-88ba-47e3-82f4-63519a394a08" testId="d5ae1a16-8788-e73b-54ed-3a1b93c72811" testName="GetDashboardSummary_ReturnsOk" computerName="LT-24-280" duration="00:00:00.0004370" startTime="2025-12-30T12:03:09.3441410+05:30" endTime="2025-12-30T12:03:09.3445780+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="90c50bd7-88ba-47e3-82f4-63519a394a08" />
+    <UnitTestResult executionId="4fceb446-5dbb-40aa-aced-e2395f4c488c" testId="22f31b40-e7aa-138f-4a32-6c2565241b34" testName="GetProjectHoursSummary_Returns500_OnException" computerName="LT-24-280" duration="00:00:00.0007760" startTime="2025-12-30T12:03:09.3476330+05:30" endTime="2025-12-30T12:03:09.3484090+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4fceb446-5dbb-40aa-aced-e2395f4c488c" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="GetBillableVsNonBillableHours_ReturnsOk_WhenNull" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="ae6b4cd8-93dc-6896-a681-0e6a1d207aa2">
+      <Execution id="70a9fe9e-04a4-4b53-b018-2db2fabebe97" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetBillableVsNonBillableHours_ReturnsOk_WhenNull" />
+    </UnitTest>
+    <UnitTest name="GetProjectHoursSummary_ReturnsOk_WhenEmpty" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="9853416b-a36c-1254-feac-cdd5a3cc6b97">
+      <Execution id="929a7cae-6029-4e7b-87df-9437bf32d7c5" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetProjectHoursSummary_ReturnsOk_WhenEmpty" />
+    </UnitTest>
+    <UnitTest name="GetBillableVsNonBillableHours_ReturnsOk" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="1630e7e7-09e8-e51b-9add-a5998938bb6f">
+      <Execution id="0be1e52b-9c73-4d3e-9e27-ed7707f9aefb" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetBillableVsNonBillableHours_ReturnsOk" />
+    </UnitTest>
+    <UnitTest name="GetEmployeeHoursSummary_Returns500_OnException" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="4eeaefd9-c3c1-67cc-e73c-299a2a2f6d4d">
+      <Execution id="82f83d8d-57b3-4b0e-8145-35c1da4431b4" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetEmployeeHoursSummary_Returns500_OnException" />
+    </UnitTest>
+    <UnitTest name="GetEmployeeHoursSummary_ReturnsOk_WhenEmpty" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="1aa8c8d3-5d87-79af-9a0e-dbbfda8f0d71">
+      <Execution id="ff49bbd1-6aed-4ed4-9f55-83e0473ab956" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetEmployeeHoursSummary_ReturnsOk_WhenEmpty" />
+    </UnitTest>
+    <UnitTest name="GetDashboardSummary_Returns500_OnException" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="f2039ea6-4a1b-f159-8022-40b189e01680">
+      <Execution id="b914be46-9abf-4402-8e01-098e198390a5" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetDashboardSummary_Returns500_OnException" />
+    </UnitTest>
+    <UnitTest name="GetDashboardSummary_ReturnsOk" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="d5ae1a16-8788-e73b-54ed-3a1b93c72811">
+      <Execution id="90c50bd7-88ba-47e3-82f4-63519a394a08" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetDashboardSummary_ReturnsOk" />
+    </UnitTest>
+    <UnitTest name="GetEmployeeHoursSummary_ReturnsOk" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="2c9708de-0ca3-e6b6-ea40-ebd29ac569f5">
+      <Execution id="b6ae2ad3-32ed-42bc-8fb4-1b09bc73230e" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetEmployeeHoursSummary_ReturnsOk" />
+    </UnitTest>
+    <UnitTest name="GetBillableVsNonBillableHours_Returns500_OnException" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="cd8e8d28-efd6-2e82-c727-c4946774aaa7">
+      <Execution id="3b34df20-8796-48ee-8fa6-76c251bc4638" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetBillableVsNonBillableHours_Returns500_OnException" />
+    </UnitTest>
+    <UnitTest name="GetProjectHoursSummary_ReturnsOk" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="08972808-059d-f19b-2f22-8c87d04d02c5">
+      <Execution id="9129f9d1-960c-4be9-ba49-334c9d6d955d" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetProjectHoursSummary_ReturnsOk" />
+    </UnitTest>
+    <UnitTest name="GetProjectHoursSummary_Returns500_OnException" storage="/users/sava446277/projects/ontheranj/ontheranj.tests/bin/debug/net8.0/ontheranj.tests.dll" id="22f31b40-e7aa-138f-4a32-6c2565241b34">
+      <Execution id="4fceb446-5dbb-40aa-aced-e2395f4c488c" />
+      <TestMethod codeBase="/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll" adapterTypeName="executor://nunit3testexecutor/" className="OnTheRanj.Tests.Controllers.ReportsControllerTests" name="GetProjectHoursSummary_Returns500_OnException" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f2039ea6-4a1b-f159-8022-40b189e01680" executionId="b914be46-9abf-4402-8e01-098e198390a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c9708de-0ca3-e6b6-ea40-ebd29ac569f5" executionId="b6ae2ad3-32ed-42bc-8fb4-1b09bc73230e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae6b4cd8-93dc-6896-a681-0e6a1d207aa2" executionId="70a9fe9e-04a4-4b53-b018-2db2fabebe97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1630e7e7-09e8-e51b-9add-a5998938bb6f" executionId="0be1e52b-9c73-4d3e-9e27-ed7707f9aefb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1aa8c8d3-5d87-79af-9a0e-dbbfda8f0d71" executionId="ff49bbd1-6aed-4ed4-9f55-83e0473ab956" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08972808-059d-f19b-2f22-8c87d04d02c5" executionId="9129f9d1-960c-4be9-ba49-334c9d6d955d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd8e8d28-efd6-2e82-c727-c4946774aaa7" executionId="3b34df20-8796-48ee-8fa6-76c251bc4638" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9853416b-a36c-1254-feac-cdd5a3cc6b97" executionId="929a7cae-6029-4e7b-87df-9437bf32d7c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4eeaefd9-c3c1-67cc-e73c-299a2a2f6d4d" executionId="82f83d8d-57b3-4b0e-8145-35c1da4431b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5ae1a16-8788-e73b-54ed-3a1b93c72811" executionId="90c50bd7-88ba-47e3-82f4-63519a394a08" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22f31b40-e7aa-138f-4a32-6c2565241b34" executionId="4fceb446-5dbb-40aa-aced-e2395f4c488c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="11" executed="11" passed="11" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.6.0.0: Test execution started
+Running selected tests in /Users/sava446277/Projects/OnTheRanj/OnTheRanj.Tests/bin/Debug/net8.0/OnTheRanj.Tests.dll
+   NUnit3TestExecutor discovered 11 of 11 NUnit test cases using Current Discovery mode, Non-Explicit run
+NUnit Adapter 4.6.0.0: Test execution complete
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

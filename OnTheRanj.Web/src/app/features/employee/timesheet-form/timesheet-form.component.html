@@ -1,0 +1,78 @@
+<app-employee-layout [sidenavLinks]="sidenavLinks">
+  <app-toolbar [userFullName]="(currentUser$ | async)?.fullName" (logout)="onCancel()">
+    <span title><mat-icon>add_circle</mat-icon> {{ isEditMode ? 'Edit Timesheet' : 'New Timesheet' }}</span>
+  </app-toolbar>
+  <div style="padding: 24px; display: flex; justify-content: center; align-items: flex-start; min-height: 80vh;">
+    <mat-card style="width: 100%; max-width: 600px;">
+      <mat-card-content>
+        <form [formGroup]="timesheetForm" (ngSubmit)="onSubmit()">
+          <div *ngIf="errorMessage" style="margin-bottom: 16px;">
+            <mat-error>{{ errorMessage }}</mat-error>
+          </div>
+          <!-- Date Field -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="date" [max]="maxDate" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="date?.hasError('required')">
+              Date is required
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Project Selection -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Project</mat-label>
+            <mat-select formControlName="projectAssignmentId">
+              <mat-option *ngFor="let assignment of allowedAssignments" [value]="assignment.id">
+                {{ assignment.projectName }}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="projectAssignmentId?.hasError('required')">
+              Project is required
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Hours Worked -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Hours Worked</mat-label>
+            <input matInput type="number" step="0.5" formControlName="hoursWorked" placeholder="Enter hours" />
+            <mat-icon matPrefix>access_time</mat-icon>
+            <mat-error *ngIf="hoursWorked?.hasError('required')">
+              Hours are required
+            </mat-error>
+            <mat-error *ngIf="hoursWorked?.hasError('min')">
+              Minimum 0.5 hours
+            </mat-error>
+            <mat-error *ngIf="hoursWorked?.hasError('max')">
+              Maximum 24 hours
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Description -->
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Description</mat-label>
+            <textarea matInput formControlName="description" rows="4" placeholder="Describe your work..."></textarea>
+            <mat-icon matPrefix>description</mat-icon>
+            <mat-error *ngIf="description?.hasError('required')">
+              Description is required
+            </mat-error>
+            <mat-error *ngIf="description?.hasError('minlength')">
+              Description must be at least 10 characters
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Action Buttons -->
+          <div class="button-group" style="display: flex; justify-content: flex-end; gap: 16px; margin-top: 24px;">
+            <button mat-button type="button" (click)="onCancel()">
+              Cancel
+            </button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="timesheetForm.invalid">
+              <mat-icon>save</mat-icon>
+              {{ isEditMode ? 'Update' : 'Submit' }}
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

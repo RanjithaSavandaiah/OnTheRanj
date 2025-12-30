@@ -1,0 +1,66 @@
+<app-toolbar [userFullName]="((user$ | async)?.fullName) || null" (logout)="onLogout()">
+  <span title>Timesheet Approvals</span>
+</app-toolbar>
+<div style="padding: 24px;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Timesheet Approvals</mat-card-title>
+      <mat-card-subtitle>Review, approve, or reject employee timesheets</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content style="padding-top: 16px;">
+      <div style="margin-bottom: 16px;">
+        <mat-button-toggle-group [value]="statusFilter" (change)="loadTimesheetsByStatus($event.value)">
+          <mat-button-toggle *ngFor="let status of statusOptions" [value]="status">{{ status }}</mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <table mat-table [dataSource]="timesheets" style="width: 100%;">
+        <ng-container matColumnDef="employee">
+          <th mat-header-cell *matHeaderCellDef>Employee</th>
+          <td mat-cell *matCellDef="let item">{{ item.employee }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="project">
+          <th mat-header-cell *matHeaderCellDef>Project</th>
+          <td mat-cell *matCellDef="let item">{{ item.project }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef>Date</th>
+          <td mat-cell *matCellDef="let item">{{ item.date }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="hours">
+          <th mat-header-cell *matHeaderCellDef>Hours</th>
+          <td mat-cell *matCellDef="let item">{{ item.hours }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let item">
+            <mat-chip>{{ item.status }}</mat-chip>
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="statusFilter === 'Pending'" matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let item">
+            <button mat-raised-button color="primary" style="margin-right: 8px;" (click)="approveTimesheet(item)">
+              <mat-icon>check</mat-icon>
+              Approve
+            </button>
+            <button mat-raised-button color="warn" (click)="rejectTimesheet(item)">
+              <mat-icon>close</mat-icon>
+              Reject
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+      <p *ngIf="timesheets.length === 0" style="text-align: center; padding: 32px; color: #666;">
+        No pending timesheets to approve
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

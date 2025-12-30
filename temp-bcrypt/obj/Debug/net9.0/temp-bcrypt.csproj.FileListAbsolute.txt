@@ -1,0 +1,17 @@
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/bin/Debug/net9.0/temp-bcrypt
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/bin/Debug/net9.0/temp-bcrypt.deps.json
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/bin/Debug/net9.0/temp-bcrypt.runtimeconfig.json
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/bin/Debug/net9.0/temp-bcrypt.dll
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/bin/Debug/net9.0/temp-bcrypt.pdb
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.csproj.AssemblyReference.cache
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.AssemblyInfoInputs.cache
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.AssemblyInfo.cs
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.csproj.CoreCompileInputs.cache
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcr.5F956D03.Up2Date
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.dll
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/refint/temp-bcrypt.dll
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.pdb
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/temp-bcrypt.genruntimeconfig.cache
+/Users/sava446277/Projects/OnTheRanj/temp-bcrypt/obj/Debug/net9.0/ref/temp-bcrypt.dll

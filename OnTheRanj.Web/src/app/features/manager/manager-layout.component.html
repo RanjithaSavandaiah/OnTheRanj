@@ -1,0 +1,11 @@
+<app-main-layout [sidenavLinks]="[
+  { label: 'Dashboard', icon: 'dashboard', route: '/manager/dashboard' },
+  { label: 'Timesheet Approvals', icon: 'approval', route: '/manager/approvals' },
+  { label: 'Projects', icon: 'folder', route: '/manager/projects' },
+  { label: 'Assignments', icon: 'assignment', route: '/manager/assignments' },
+  { label: 'Reports', icon: 'assessment', route: '/manager/reports' }
+]">
+  <span brand>OnTheRanj</span>
+  <span subtitle>Manager Portal</span>
+  <router-outlet></router-outlet>
+</app-main-layout>

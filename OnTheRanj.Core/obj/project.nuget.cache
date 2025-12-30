@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "hTaltBSIXOo=",
+  "success": true,
+  "projectFilePath": "/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/OnTheRanj.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/sava446277/.nuget/packages/microsoft.netcore.app.ref/8.0.20/microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
+    "/Users/sava446277/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.20/microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512"
+  ],
+  "logs": []
+}

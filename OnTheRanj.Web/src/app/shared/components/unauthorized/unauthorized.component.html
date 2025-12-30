@@ -1,0 +1,20 @@
+<app-main-layout [sidenavLinks]="[]">
+  <span brand>OnTheRanj</span>
+  <span subtitle>Unauthorized</span>
+  <app-toolbar>
+    <span title>Access Denied</span>
+  </app-toolbar>
+  <div class="unauthorized-container">
+    <mat-card class="unauthorized-card">
+      <mat-card-content>
+        <mat-icon class="error-icon">block</mat-icon>
+        <h1>Access Denied</h1>
+        <p>You don't have permission to access this page.</p>
+        <button mat-raised-button color="primary" routerLink="/login">
+          <mat-icon>home</mat-icon>
+          Return to Login
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</app-main-layout>

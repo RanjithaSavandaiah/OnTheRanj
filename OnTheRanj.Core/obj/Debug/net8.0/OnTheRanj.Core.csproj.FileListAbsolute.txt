@@ -1,0 +1,11 @@
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/bin/Debug/net8.0/OnTheRanj.Core.deps.json
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/bin/Debug/net8.0/OnTheRanj.Core.dll
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/bin/Debug/net8.0/OnTheRanj.Core.pdb
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/OnTheRanj.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/OnTheRanj.Core.AssemblyInfoInputs.cache
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/OnTheRanj.Core.AssemblyInfo.cs
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/OnTheRanj.Core.csproj.CoreCompileInputs.cache
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/OnTheRanj.Core.dll
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/refint/OnTheRanj.Core.dll
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/OnTheRanj.Core.pdb
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Core/obj/Debug/net8.0/ref/OnTheRanj.Core.dll

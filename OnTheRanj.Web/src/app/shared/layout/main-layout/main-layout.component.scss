@@ -1,0 +1,19 @@
+.sidenav-header {
+  padding: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.sidenav-header h2 {
+  margin: 0;
+  color: #5e35b1;
+}
+.sidenav-header p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #666;
+}
+mat-sidenav {
+  width: 250px;
+}
+mat-sidenav-container {
+  height: 100vh;
+}

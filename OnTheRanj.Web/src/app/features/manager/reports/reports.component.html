@@ -1,0 +1,156 @@
+<app-toolbar [userFullName]="currentUser?.fullName || null" (logout)="onLogout()">
+  <span title>Reports</span>
+</app-toolbar>
+<div style="padding: 24px;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Reports</mat-card-title>
+      <mat-card-subtitle>View timesheet and project analytics for your team</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content style="padding-top: 16px;">
+      <form [formGroup]="form" class="date-range-form" (ngSubmit)="$event.preventDefault()">
+        <mat-form-field appearance="fill" style="min-width: 200px;">
+          <mat-label>Start Date</mat-label>
+          <input matInput [matDatepicker]="startPicker" formControlName="startDate" (dateChange)="onDateChange()">
+          <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+          <mat-datepicker #startPicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" style="min-width: 200px;">
+          <mat-label>End Date</mat-label>
+          <input matInput [matDatepicker]="endPicker" formControlName="endDate" (dateChange)="onDateChange()">
+          <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+          <mat-datepicker #endPicker></mat-datepicker>
+        </mat-form-field>
+      </form>
+      <mat-tab-group [selectedIndex]="activeTab" (selectedIndexChange)="onTabChange($event)">
+        <mat-tab label="Employee Summary">
+          <div style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 8px;">
+            <button mat-stroked-button color="primary"
+              (click)="downloadEmployeeReportExcel()"><mat-icon>download</mat-icon> Excel</button>
+            <button mat-stroked-button color="accent"
+              (click)="downloadEmployeeReportPDF()"><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+          </div>
+          <div style="margin-top: 8px;">
+            <mat-progress-spinner *ngIf="loading" mode="indeterminate" diameter="32"></mat-progress-spinner>
+            <table mat-table [dataSource]="employeeData" class="mat-elevation-z8" *ngIf="!loading" style="width: 100%;">
+              <ng-container matColumnDef="employeeName">
+                <th mat-header-cell *matHeaderCellDef>Employee</th>
+                <td mat-cell *matCellDef="let row">{{ row.employeeName }}</td>
+              </ng-container>
+              <ng-container matColumnDef="totalHours">
+                <th mat-header-cell *matHeaderCellDef>Total Hours</th>
+                <td mat-cell *matCellDef="let row">{{ row.totalHours }}</td>
+              </ng-container>
+              <ng-container matColumnDef="billableHours">
+                <th mat-header-cell *matHeaderCellDef>Billable</th>
+                <td mat-cell *matCellDef="let row">{{ row.billableHours }}</td>
+              </ng-container>
+              <ng-container matColumnDef="nonBillableHours">
+                <th mat-header-cell *matHeaderCellDef>Non-Billable</th>
+                <td mat-cell *matCellDef="let row">{{ row.nonBillableHours }}</td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedEmployeeColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedEmployeeColumns;"></tr>
+            </table>
+            <p *ngIf="employeeData && employeeData.length === 0 && !loading"
+              style="text-align: center; padding: 32px; color: #666;">
+              No data found
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Project Summary">
+          <div style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 8px;">
+            <button mat-stroked-button color="primary"
+              (click)="downloadProjectReportExcel()"><mat-icon>download</mat-icon> Excel</button>
+            <button mat-stroked-button color="accent"
+              (click)="downloadProjectReportPDF()"><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+          </div>
+          <div style="margin-top: 8px;">
+            <mat-progress-spinner *ngIf="loading" mode="indeterminate" diameter="32"></mat-progress-spinner>
+            <table mat-table [dataSource]="projectData" class="mat-elevation-z8" *ngIf="!loading" style="width: 100%;">
+              <ng-container matColumnDef="projectCode">
+                <th mat-header-cell *matHeaderCellDef>Code</th>
+                <td mat-cell *matCellDef="let row">{{ row.projectCode }}</td>
+              </ng-container>
+              <ng-container matColumnDef="projectName">
+                <th mat-header-cell *matHeaderCellDef>Project</th>
+                <td mat-cell *matCellDef="let row">{{ row.projectName }}</td>
+              </ng-container>
+              <ng-container matColumnDef="clientName">
+                <th mat-header-cell *matHeaderCellDef>Client</th>
+                <td mat-cell *matCellDef="let row">{{ row.clientName }}</td>
+              </ng-container>
+              <ng-container matColumnDef="totalHours">
+                <th mat-header-cell *matHeaderCellDef>Total Hours</th>
+                <td mat-cell *matCellDef="let row">{{ row.totalHours }}</td>
+              </ng-container>
+              <ng-container matColumnDef="employeeCount">
+                <th mat-header-cell *matHeaderCellDef>Employees</th>
+                <td mat-cell *matCellDef="let row">{{ row.employeeCount }}</td>
+              </ng-container>
+              <tr mat-header-row *matHeaderRowDef="displayedProjectColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedProjectColumns;"></tr>
+            </table>
+            <p *ngIf="projectData && projectData.length === 0 && !loading"
+              style="text-align: center; padding: 32px; color: #666;">
+              No data found
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Billable vs Non-Billable">
+          <div style="margin-top: 16px; display: flex; justify-content: flex-end; gap: 8px;">
+            <button mat-stroked-button color="primary"
+              (click)="downloadBillableReportExcel()"><mat-icon>download</mat-icon> Excel</button>
+            <button mat-stroked-button color="accent"
+              (click)="downloadBillableReportPDF()"><mat-icon>picture_as_pdf</mat-icon> PDF</button>
+          </div>
+          <div style="margin-top: 8px;">
+            <mat-card *ngIf="billableData">
+              <mat-card-header>
+                <mat-card-title>Billable vs Non-Billable Hours</mat-card-title>
+                <mat-card-subtitle>Summary and breakdown for selected period</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <mat-progress-spinner *ngIf="loading" mode="indeterminate" diameter="32"></mat-progress-spinner>
+                <div *ngIf="!loading">
+                  <div class="billable-bar-visual">
+                    <div class="bar-container">
+                      <div class="bar-billable" [style.width.%]="billableData.billablePercentage"></div>
+                      <div class="bar-nonbillable" [style.width.%]="100 - billableData.billablePercentage"></div>
+                    </div>
+                    <div class="bar-labels">
+                      <span class="billable-label">Billable</span>
+                      <span class="nonbillable-label">Non-Billable</span>
+                    </div>
+                  </div>
+                  <div class="billable-summary-grid">
+                    <div>
+                      <span class="summary-label">Billable Hours</span>
+                      <span class="summary-value billable-badge">{{ billableData.totalBillableHours }}</span>
+                    </div>
+                    <div>
+                      <span class="summary-label">Non-Billable Hours</span>
+                      <span class="summary-value nonbillable-badge">{{ billableData.totalNonBillableHours }}</span>
+                    </div>
+                    <div>
+                      <span class="summary-label">Total Hours</span>
+                      <span class="summary-value">{{ billableData.totalHours }}</span>
+                    </div>
+                    <div>
+                      <span class="summary-label">Billable %</span>
+                      <span class="summary-value billable-badge">{{ billableData.billablePercentage | number:'1.0-2'
+                        }}%</span>
+                    </div>
+                  </div>
+                </div>
+              </mat-card-content>
+            </mat-card>
+            <p *ngIf="!billableData && !loading" style="text-align: center; padding: 32px; color: #666;">
+              No data found
+            </p>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+</div>

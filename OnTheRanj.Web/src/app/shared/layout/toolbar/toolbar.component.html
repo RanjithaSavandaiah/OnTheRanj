@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <span><ng-content select="[title]"></ng-content></span>
+  <span class="toolbar-spacer"></span>
+  <span class="toolbar-user" *ngIf="userFullName">
+    Welcome, {{ userFullName }}
+  </span>
+  <button mat-icon-button (click)="logout.emit()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>

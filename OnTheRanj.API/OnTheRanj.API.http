@@ -1,0 +1,6 @@
+@OnTheRanj.API_HostAddress = http://localhost:5197
+
+GET {{OnTheRanj.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

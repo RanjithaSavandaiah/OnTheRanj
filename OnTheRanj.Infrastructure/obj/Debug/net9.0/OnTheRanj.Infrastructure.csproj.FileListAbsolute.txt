@@ -1,0 +1,15 @@
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/bin/Debug/net9.0/OnTheRanj.Infrastructure.deps.json
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/bin/Debug/net9.0/OnTheRanj.Infrastructure.dll
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/bin/Debug/net9.0/OnTheRanj.Infrastructure.pdb
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/bin/Debug/net9.0/OnTheRanj.Core.dll
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/bin/Debug/net9.0/OnTheRanj.Core.pdb
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRanj.Infrastructure.csproj.AssemblyReference.cache
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRanj.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRanj.Infrastructure.AssemblyInfoInputs.cache
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRanj.Infrastructure.AssemblyInfo.cs
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRanj.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRan.CA149AA5.Up2Date
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRanj.Infrastructure.dll
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/refint/OnTheRanj.Infrastructure.dll
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/OnTheRanj.Infrastructure.pdb
+/Users/sava446277/Projects/OnTheRanj/OnTheRanj.Infrastructure/obj/Debug/net9.0/ref/OnTheRanj.Infrastructure.dll

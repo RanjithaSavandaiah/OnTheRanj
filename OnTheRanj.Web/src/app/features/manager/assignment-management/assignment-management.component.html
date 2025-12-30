@@ -1,0 +1,69 @@
+<app-toolbar [userFullName]="currentUser?.fullName ?? null" (logout)="onLogout()">
+  <span title>Assignment Management</span>
+</app-toolbar>
+<div style="padding: 24px;">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Assignment Management</mat-card-title>
+      <mat-card-subtitle>Assign employees to projects and manage assignment date ranges</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content style="padding-top: 16px;">
+      <div *ngIf="error" style="color: red; text-align: center; margin-bottom: 16px;">
+        {{ error }}
+      </div>
+      <mat-form-field appearance="fill" style="min-width: 250px; margin-bottom: 16px;">
+        <mat-label>Select Employee</mat-label>
+        <mat-select [(ngModel)]="selectedEmployeeId" (selectionChange)="onEmployeeChange()"
+          [compareWith]="compareEmployee" [disabled]="loading || employees.length === 0">
+          <mat-option [value]="null">All Employees</mat-option>
+          <mat-option *ngFor="let emp of employees" [value]="emp.id || null">{{ emp.fullName }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary" style="margin-bottom: 16px; margin-left: 16px;"
+        (click)="openCreateDialog()" [disabled]="loading || employees.length === 0 || projects.length === 0 || error">
+        <mat-icon style="margin-right: 4px;">add</mat-icon>
+        New Assignment
+      </button>
+      <mat-spinner *ngIf="loading || employees.length === 0 || projects.length === 0"
+        style="display: block; margin: 24px auto;"></mat-spinner>
+      <table mat-table [dataSource]="assignments" class="mat-elevation-z8"
+        *ngIf="assignments && assignments.length > 0 && !loading && employees.length > 0 && projects.length > 0 && !error"
+        style="width: 100%;">
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let a">{{a.id}}</td>
+        </ng-container>
+        <ng-container matColumnDef="employee">
+          <th mat-header-cell *matHeaderCellDef>Employee</th>
+          <td mat-cell *matCellDef="let a">{{a.employeeName}}</td>
+        </ng-container>
+        <ng-container matColumnDef="projectCode">
+          <th mat-header-cell *matHeaderCellDef>Project</th>
+          <td mat-cell *matCellDef="let a">{{a.projectName}}</td>
+        </ng-container>
+        <ng-container matColumnDef="startDate">
+          <th mat-header-cell *matHeaderCellDef>Start Date</th>
+          <td mat-cell *matCellDef="let a">{{a.startDate | date}}</td>
+        </ng-container>
+        <ng-container matColumnDef="endDate">
+          <th mat-header-cell *matHeaderCellDef>End Date</th>
+          <td mat-cell *matCellDef="let a">{{a.endDate | date}}</td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let a">
+            <button mat-icon-button color="primary" (click)="openEditDialog(a)"><mat-icon>edit</mat-icon></button>
+            <button mat-icon-button color="warn" (click)="deleteAssignment(a.id)"><mat-icon>delete</mat-icon></button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <p *ngIf="assignments && assignments.length === 0 && !loading"
+        style="text-align: center; padding: 32px; color: #666;">
+        No assignments found
+      </p>
+      <mat-spinner *ngIf="loading"></mat-spinner>
+    </mat-card-content>
+  </mat-card>
+</div>
